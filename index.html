@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicio de Data Cleanup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Transformo tus Excels caóticos en datos claros y accionables</h1>
+      <p class="subtitle">
+        Servicio profesional de limpieza y análisis de datos para pequeños negocios,
+        tiendas online y agencias que no quieren perder horas peleándose con sus hojas de cálculo.
+      </p>
+      <ul class="hero-bullets">
+        <li>Limpieza de bases de datos (clientes, ventas, pedidos).</li>
+        <li>Corrección de errores, duplicados y formatos.</li>
+        <li>Archivo limpio + informe con gráficos e insights.</li>
+      </ul>
+      <a href="#contacto" class="btn-primary">Solicitar presupuesto gratuito</a>
+      <p class="small-note">
+        Envíame tu archivo y en 24 horas te digo qué puedo hacer por tus datos.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="servicio">
+      <div class="container">
+        <h2>Qué hago exactamente</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Limpieza profunda de datos</h3>
+            <ul>
+              <li>Eliminación de duplicados y registros innecesarios.</li>
+              <li>Corrección de formatos (fechas, mayúsculas/minúsculas, espacios).</li>
+              <li>Normalización de nombres de clientes, productos y categorías.</li>
+              <li>Validación de emails, códigos postales y campos clave.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Validación, enriquecimiento e informe</h3>
+            <ul>
+              <li>Detección y corrección de errores e incoherencias.</li>
+              <li>Identificación de campos vacíos críticos.</li>
+              <li>Creación de columnas útiles (segmentos, etiquetas, métricas).</li>
+              <li>Informe visual con gráficos e insights accionables.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="ejemplo">
+      <div class="container">
+        <h2>Antes y después</h2>
+        <p>Un ejemplo simplificado de cómo queda una base de datos tras el proceso de limpieza:</p>
+        <div class="grid-2 tables">
+          <div>
+            <h3>Antes</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Fecha compra</th>
+                  <th>Cantidad</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>juan garcia</td>
+                  <td>JUAN@GMAIL.COM</td>
+                  <td>01/02/25</td>
+                  <td>1</td>
+                  <td>completada</td>
+                </tr>
+                <tr>
+                  <td>Juan García</td>
+                  <td>juan@gmail.com</td>
+                  <td>1-2-2025</td>
+                  <td>1</td>
+                  <td>Completada</td>
+                </tr>
+                <tr>
+                  <td>J. García</td>
+                  <td>juan.garcia@gmail.co m</td>
+                  <td>01.02.2025</td>
+                  <td>1</td>
+                  <td>Completa</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Después</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Fecha_compra</th>
+                  <th>Cantidad_total</th>
+                  <th>Estado</th>
+                  <th>Segmento</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Juan García</td>
+                  <td>juan@gmail.com</td>
+                  <td>2025-02-01</td>
+                  <td>3</td>
+                  <td>Completada</td>
+                  <td>Cliente recurrente</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="small-note">
+              La tabla limpia permite identificar rápidamente a tus mejores clientes y tomar decisiones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="proceso">
+      <div class="container">
+        <h2>Cómo trabajamos</h2>
+        <ol class="steps">
+          <li><strong>1. Envío de archivos</strong> · Me mandas tus Excels/CSVs o exportaciones de tu tienda o CRM.</li>
+          <li><strong>2. Revisión y propuesta</strong> · Analizo la calidad de los datos y te envío un presupuesto cerrado.</li>
+          <li><strong>3. Limpieza y análisis</strong> · Aplico reglas de limpieza, valoro casos dudosos y genero las métricas clave.</li>
+          <li><strong>4. Entrega</strong> · Recibes el archivo limpio y un informe visual listo para presentar o seguir trabajando.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="precios">
+      <div class="container">
+        <h2>Precios orientativos</h2>
+        <p>El precio final depende del volumen y la complejidad de tus datos, pero estos son rangos habituales:</p>
+        <div class="grid-3 cards">
+          <div class="card">
+            <h3>Pequeño</h3>
+            <p class="price">40–60 €</p>
+            <p>Hasta 5.000 filas. Ideal para bases de clientes o ventas de pequeño negocio.</p>
+          </div>
+          <div class="card">
+            <h3>Medio</h3>
+            <p class="price">80–150 €</p>
+            <p>Entre 5.000 y 50.000 filas. Pensado para tiendas online y negocios en crecimiento.</p>
+          </div>
+          <div class="card">
+            <h3>Grande</h3>
+            <p class="price">A medida</p>
+            <p>Más de 50.000 filas o varias fuentes de datos. Presupuesto personalizado.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p>
+          Cuéntame brevemente qué tipo de datos tienes y qué te gustaría conseguir. Te responderé con una propuesta clara.
+        </p>
+        <p><strong>Email:</strong> <a href="mailto:tuemail@ejemplo.com">tuemail@ejemplo.com</a></p>
+        <p><strong>WhatsApp:</strong> <a href="https://wa.me/34XXXXXXXXX" target="_blank">+34 XXX XXX XXX</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Servicio de Data Cleanup · Dashboardfinanciero.es · Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
