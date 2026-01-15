@@ -178,3 +178,51 @@ ul {
   color: #c77a12;
 }
 
+.examples {
+  background-color: #fafafa;
+}
+
+.examples .section-subtitle {
+  max-width: 600px;
+  margin: 0.5rem auto 2rem;
+  color: #555;
+  text-align: center;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.example-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e5e5e5;
+}
+
+.example-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.example-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .examples-grid {
+    gap: 1rem;
+  }
+
+  .example-card {
+    padding: 1rem 1rem;
+  }
+}
+
