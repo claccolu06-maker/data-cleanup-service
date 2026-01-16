@@ -146,7 +146,14 @@ ul {
   border-collapse: collapse;
   margin-top: 0.5rem;
   font-size: 0.9rem;
-  min-width: 600px;
+  /* quita el min-width global */
+}
+
+/* Solo obligar a scroll en móvil */
+@media (max-width: 600px) {
+  .table-wrapper table {
+    min-width: 600px;
+  }
 }
 
 .table-wrapper th,
@@ -360,6 +367,7 @@ ul {
     -webkit-overflow-scrolling: touch;
   }
 }
+
 
 
 
