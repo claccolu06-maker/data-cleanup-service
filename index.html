@@ -56,79 +56,33 @@
     </section>
 
     <!-- ANTES / DESPUÉS -->
-    <section class="section alt" id="ejemplo">
-      <div class="container">
-        <h2>Antes y después</h2>
-        <p>Un ejemplo simplificado de cómo queda una base de datos tras el proceso de limpieza:</p>
-        <div class="grid-2 tables">
-          <div>
-            <h3>Antes</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Email</th>
-                  <th>Fecha compra</th>
-                  <th>Cantidad</th>
-                  <th>Estado</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>juan garcia</td>
-                  <td>JUAN@GMAIL.COM</td>
-                  <td>01/02/25</td>
-                  <td>1</td>
-                  <td>completada</td>
-                </tr>
-                <tr>
-                  <td>Juan García</td>
-                  <td>juan@gmail.com</td>
-                  <td>1-2-2025</td>
-                  <td>1</td>
-                  <td>Completada</td>
-                </tr>
-                <tr>
-                  <td>J. García</td>
-                  <td>juan.garcia@gmail.co m</td>
-                  <td>01.02.2025</td>
-                  <td>1</td>
-                  <td>Completa</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div>
-            <h3>Después</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th>Nombre</th>
-                  <th>Email</th>
-                  <th>Fecha_compra</th>
-                  <th>Cantidad_total</th>
-                  <th>Estado</th>
-                  <th>Segmento</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Juan García</td>
-                  <td>juan@gmail.com</td>
-                  <td>2025-02-01</td>
-                  <td>3</td>
-                  <td>Completada</td>
-                  <td>Clientes recurrente</td>
-                </tr>
-              </tbody>
-            </table>
-            <p class="small-note">
-              La tabla limpia permite identificar rápidamente a tus mejores clientes y tomar decisiones.
-            </p>
-          </div>
+<section class="section alt" id="ejemplo">
+  <div class="container">
+    <h2>Antes y después</h2>
+    <p>Un ejemplo simplificado de cómo queda una base de datos tras el proceso de limpieza:</p>
+    <div class="grid-2 tables">
+      <div>
+        <h3>Antes</h3>
+        <div class="table-wrapper">
+          <table>
+            <!-- tabla ANTES igual que la tienes -->
+          </table>
         </div>
       </div>
-    </section>
+      <div>
+        <h3>Después</h3>
+        <div class="table-wrapper">
+          <table>
+            <!-- tabla DESPUÉS igual que la tienes -->
+          </table>
+        </div>
+        <p class="small-note">
+          La tabla limpia permite identificar rápidamente a tus mejores clientes y tomar decisiones.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- PROCESO -->
     <section class="section" id="proceso">
@@ -349,6 +303,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
