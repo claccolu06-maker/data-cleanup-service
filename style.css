@@ -28,7 +28,8 @@ body {
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 2rem;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
@@ -131,29 +132,32 @@ ul {
 }
 
 /* Tablas ejemplo antes/después */
-.tables table {
+.tables {
+  margin-top: 1rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 0.5rem;
   font-size: 0.9rem;
+  min-width: 600px;
 }
 
-.tables th,
-.tables td {
+.table-wrapper th,
+.table-wrapper td {
   border: 1px solid #d0d7e2;
   padding: 0.4rem 0.5rem;
 }
 
-.tables th {
+.table-wrapper th {
   background: #f0f4ff;
   text-align: left;
-}
-.tables {
-  overflow-x: auto;
-}
-
-.tables table {
-  min-width: 600px; /* obliga a scroll en pantallas pequeñas */
 }
 
 /* Pasos */
@@ -182,6 +186,25 @@ ul {
   font-weight: 700;
   color: #0f5eff;
   margin-bottom: 0.5rem;
+}
+
+/* FAQ */
+.faq-item {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+}
+
+.faq-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #444;
 }
 
 /* Ejemplos de trabajos */
@@ -303,24 +326,16 @@ ul {
 }
 
 /* Responsive */
-.hero h1 {
-  font-size: 2.1rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-/* Responsive */
 @media (max-width: 600px) {
-  .tables .grid-2 {
-    gap: 1.5rem;
+  .hero {
+    padding: 3rem 0 2.5rem;
   }
-}
 
   .hero h1 {
     font-size: 1.6rem;
     line-height: 1.25;
   }
-}
+
   .examples-grid {
     gap: 1rem;
   }
@@ -332,22 +347,7 @@ ul {
   .contact-actions {
     flex-direction: column;
   }
-}
-.tables {
-  margin-top: 1rem;
-}
 
-.table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-}
-
-.table-wrapper table {
-  min-width: 600px;
-}
-
-/* Ajuste extra en móvil */
-@media (max-width: 600px) {
   .tables {
     gap: 1.5rem;
   }
@@ -360,6 +360,8 @@ ul {
     -webkit-overflow-scrolling: touch;
   }
 }
+
+
 
 
 
