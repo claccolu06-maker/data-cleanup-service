@@ -148,6 +148,13 @@ ul {
   background: #f0f4ff;
   text-align: left;
 }
+.tables {
+  overflow-x: auto;
+}
+
+.tables table {
+  min-width: 600px; /* obliga a scroll en pantallas pequeñas */
+}
 
 /* Pasos */
 .steps {
@@ -304,9 +311,10 @@ ul {
 
 /* Responsive */
 @media (max-width: 600px) {
-  .hero {
-    padding: 3rem 0 2.5rem;
+  .tables .grid-2 {
+    gap: 1.5rem;
   }
+}
 
   .hero h1 {
     font-size: 1.6rem;
@@ -325,6 +333,7 @@ ul {
     flex-direction: column;
   }
 }
+
 
 
 
