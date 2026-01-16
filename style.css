@@ -333,6 +333,33 @@ ul {
     flex-direction: column;
   }
 }
+.tables {
+  margin-top: 1rem;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  min-width: 600px;
+}
+
+/* Ajuste extra en móvil */
+@media (max-width: 600px) {
+  .tables {
+    gap: 1.5rem;
+  }
+
+  .tables h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .table-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+}
 
 
 
