@@ -11,10 +11,10 @@
   <header class="hero">
     <div class="container">
       <h1>Convierte tus datos desordenados en decisiones claras y accionables</h1>
-<p class="subtitle">
-  Limpio tus bases de datos, unifico la información y preparo un informe con los insights importantes
-  para entender mejor tus clientes, ventas y resultados.
-</p>
+      <p class="subtitle">
+        Limpio tus bases de datos, unifico la información y preparo un informe con los insights importantes
+        para entender mejor tus clientes, ventas y resultados.
+      </p>
       <ul class="hero-bullets">
         <li>Limpieza de bases de datos (clientes, ventas, pedidos).</li>
         <li>Corrección de errores, duplicados y formatos.</li>
@@ -56,33 +56,83 @@
     </section>
 
     <!-- ANTES / DESPUÉS -->
-<section class="section alt" id="ejemplo">
-  <div class="container">
-    <h2>Antes y después</h2>
-    <p>Un ejemplo simplificado de cómo queda una base de datos tras el proceso de limpieza:</p>
-    <div class="grid-2 tables">
-      <div>
-        <h3>Antes</h3>
-        <div class="table-wrapper">
-          <table>
-            <!-- tabla ANTES igual que la tienes -->
-          </table>
+    <section class="section alt" id="ejemplo">
+      <div class="container">
+        <h2>Antes y después</h2>
+        <p>Un ejemplo simplificado de cómo queda una base de datos tras el proceso de limpieza:</p>
+        <div class="grid-2 tables">
+          <div>
+            <h3>Antes</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Fecha compra</th>
+                    <th>Cantidad</th>
+                    <th>Estado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>juan garcia</td>
+                    <td>JUAN@GMAIL.COM</td>
+                    <td>01/02/25</td>
+                    <td>1</td>
+                    <td>completada</td>
+                  </tr>
+                  <tr>
+                    <td>Juan García</td>
+                    <td>juan@gmail.com</td>
+                    <td>1-2-2025</td>
+                    <td>1</td>
+                    <td>Completada</td>
+                  </tr>
+                  <tr>
+                    <td>J. García</td>
+                    <td>juan.garcia@gmail.co m</td>
+                    <td>01.02.2025</td>
+                    <td>1</td>
+                    <td>Completa</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div>
+            <h3>Después</h3>
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th>Fecha_compra</th>
+                    <th>Cantidad_total</th>
+                    <th>Estado</th>
+                    <th>Segmento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Juan García</td>
+                    <td>juan@gmail.com</td>
+                    <td>2025-02-01</td>
+                    <td>3</td>
+                    <td>Completada</td>
+                    <td>Clientes recurrente</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="small-note">
+              La tabla limpia permite identificar rápidamente a tus mejores clientes y tomar decisiones.
+            </p>
+          </div>
         </div>
       </div>
-      <div>
-        <h3>Después</h3>
-        <div class="table-wrapper">
-          <table>
-            <!-- tabla DESPUÉS igual que la tienes -->
-          </table>
-        </div>
-        <p class="small-note">
-          La tabla limpia permite identificar rápidamente a tus mejores clientes y tomar decisiones.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- PROCESO -->
     <section class="section" id="proceso">
@@ -122,43 +172,45 @@
         </div>
       </div>
     </section>
-<section class="section" id="faq">
-  <div class="container">
-    <h2>Preguntas frecuentes</h2>
 
-    <div class="faq-item">
-      <h3>¿Qué tipos de archivos aceptas?</h3>
-      <p>
-        Trabajo sobre todo con Excel y CSV, pero también puedo partir de exportaciones de tu tienda online,
-        CRM u otros sistemas siempre que se puedan convertir a tabla.
-      </p>
-    </div>
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>Preguntas frecuentes</h2>
 
-    <div class="faq-item">
-      <h3>¿Cuánto tardas en entregar un proyecto?</h3>
-      <p>
-        Depende del volumen y la complejidad, pero la mayoría de proyectos pequeños se entregan en
-        entre 2 y 5 días laborables. En la propuesta inicial siempre indico el plazo estimado.
-      </p>
-    </div>
+        <div class="faq-item">
+          <h3>¿Qué tipos de archivos aceptas?</h3>
+          <p>
+            Trabajo sobre todo con Excel y CSV, pero también puedo partir de exportaciones de tu tienda online,
+            CRM u otros sistemas siempre que se puedan convertir a tabla.
+          </p>
+        </div>
 
-    <div class="faq-item">
-      <h3>¿Cómo se calcula el precio final?</h3>
-      <p>
-        El precio depende del número de filas, el estado de los datos y si necesitas solo limpieza o
-        también informe con gráficos. Siempre acordamos un presupuesto cerrado antes de empezar.
-      </p>
-    </div>
+        <div class="faq-item">
+          <h3>¿Cuánto tardas en entregar un proyecto?</h3>
+          <p>
+            Depende del volumen y la complejidad, pero la mayoría de proyectos pequeños se entregan en
+            entre 2 y 5 días laborables. En la propuesta inicial siempre indico el plazo estimado.
+          </p>
+        </div>
 
-    <div class="faq-item">
-      <h3>¿Qué pasa con mis datos una vez terminas?</h3>
-      <p>
-        Uso tus datos solo para realizar el trabajo contratado. Una vez entregado el proyecto,
-        conservo los archivos como máximo [X] días por si hay ajustes y después los elimino de forma segura.
-      </p>
-    </div>
-  </div>
-</section>
+        <div class="faq-item">
+          <h3>¿Cómo se calcula el precio final?</h3>
+          <p>
+            El precio depende del número de filas, el estado de los datos y si necesitas solo limpieza o
+            también informe con gráficos. Siempre acordamos un presupuesto cerrado antes de empezar.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué pasa con mis datos una vez terminas?</h3>
+          <p>
+            Uso tus datos solo para realizar el trabajo contratado. Una vez entregado el proyecto,
+            conservo los archivos como máximo [X] días por si hay ajustes y después los elimino de forma segura.
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- SOBRE MÍ -->
     <section class="section alt" id="sobre-mi">
