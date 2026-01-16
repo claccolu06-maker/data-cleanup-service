@@ -89,6 +89,21 @@ body {
 .section h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40%;
+  max-width: 120px;
+  height: 3px;
+  background: #0f5eff;
+  border-radius: 999px;
 }
 
 .section h3 {
@@ -281,15 +296,23 @@ ul {
 }
 
 /* Responsive */
+.hero h1 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .hero {
     padding: 3rem 0 2.5rem;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    line-height: 1.25;
   }
-
+}
   .examples-grid {
     gap: 1rem;
   }
@@ -302,5 +325,6 @@ ul {
     flex-direction: column;
   }
 }
+
 
 
