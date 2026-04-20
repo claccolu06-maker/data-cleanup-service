@@ -1,466 +1,472 @@
-/* =========================
-   Reset básico y base
-   ========================= */
-*,
-*::before,
-*::after {
+/* ==============================================
+   IMPORTS
+   ============================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ==============================================
+   RESET
+   ============================================== */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
-  color: #101827;
-  background: #f4f5fb;
+/* ==============================================
+   VARIABLES
+   ============================================== */
+:root {
+  --blue:       #2563eb;
+  --blue-dark:  #1d4ed8;
+  --blue-light: #eff6ff;
+  --cyan:       #06b6d4;
+  --green:      #22c55e;
+  --dark:       #0a0f1e;
+  --dark-2:     #111827;
+  --gray-1:     #f8fafc;
+  --gray-2:     #f1f5f9;
+  --gray-3:     #e2e8f0;
+  --gray-4:     #94a3b8;
+  --text:       #0f172a;
+  --text-soft:  #475569;
+  --radius:     0.75rem;
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.09);
+  --shadow-lg:  0 20px 50px rgba(0,0,0,0.13);
 }
 
-/* Contenedor centrado */
+/* ==============================================
+   BASE
+   ============================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--gray-1);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==============================================
+   CONTAINER
+   ============================================== */
 .container {
   width: 100%;
-  max-width: 1120px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-/* =========================
-   Hero
-   ========================= */
+/* ==============================================
+   NAVBAR FIJA (pseudo-elemento en hero)
+   ============================================== */
+body::before {
+  content: '';
+  display: block;
+  height: 56px;
+}
+
+.hero::before {
+  content: 'Data Cleanup · Servicio profesional de limpieza de datos';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 56px;
+  background: rgba(10, 15, 30, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  padding: 0 2.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* ==============================================
+   HERO
+   ============================================== */
 .hero {
-  background: radial-gradient(circle at top left, #3b82f6 0, #1d4ed8 40%, #020617 100%);
-  color: #ffffff;
-  padding: 4.5rem 0 3.5rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(37,99,235,0.5) 0%, transparent 70%),
+    linear-gradient(160deg, #0a0f1e 0%, #0d1b3e 55%, #060c18 100%);
+  color: #fff;
+  padding: 5.5rem 0 7rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Grid decorativo de fondo */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 52px 52px;
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1 {
-  font-size: 2.25rem;
-  line-height: 1.15;
-  margin-bottom: 1rem;
-  letter-spacing: -0.03em;
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  max-width: 800px;
+  margin-bottom: 1.3rem;
+}
+
+.hero h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, #60a5fa 0%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .subtitle {
   font-size: 1.05rem;
-  max-width: 680px;
-  margin-bottom: 1.5rem;
-  color: #e5edff;
+  max-width: 600px;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+  line-height: 1.75;
 }
 
+/* Bullets como badges pill */
 .hero-bullets {
   list-style: none;
-  margin-bottom: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero-bullets li {
-  position: relative;
-  padding-left: 1.4rem;
-  margin-bottom: 0.4rem;
-  font-size: 0.98rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(255,255,255,0.055);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #e2e8f0;
+  font-size: 0.83rem;
+  font-weight: 500;
+  padding: 0.38rem 0.9rem;
+  border-radius: 999px;
+  backdrop-filter: blur(4px);
 }
 
 .hero-bullets li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55rem;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 999px;
-  background: #a5b4fc;
+  content: '✓';
+  color: #34d399;
+  font-weight: 800;
+  font-size: 0.75rem;
 }
 
-/* =========================
-   Botones
-   ========================= */
+/* ==============================================
+   BOTONES
+   ============================================== */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.85rem 1.8rem;
-  background: #f9fafb;
-  color: #1d4ed8;
+  gap: 0.4rem;
+  padding: 0.88rem 1.85rem;
+  background: var(--blue);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
   font-weight: 600;
+  font-size: 0.92rem;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 0.95rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, background-color 0.15s ease-out;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+  cursor: pointer;
 }
 
 .btn-primary:hover {
-  background: #e5edff;
-  transform: translateY(-1px);
-  box-shadow: 0 14px 36px rgba(15, 23, 42, 0.3);
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.45);
 }
 
-/* Variación WhatsApp */
+/* En hero los botones son blancos */
+.hero .btn-primary {
+  background: #ffffff;
+  color: var(--blue-dark);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.3);
+}
+
+.hero .btn-primary:hover {
+  background: #eff6ff;
+  box-shadow: 0 10px 36px rgba(0,0,0,0.35);
+}
+
 .btn-whatsapp {
-  background: #22c55e;
-  color: #ffffff;
-  box-shadow: 0 10px 26px rgba(22, 163, 74, 0.4);
+  background: #16a34a !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(22,163,74,0.38) !important;
 }
 
 .btn-whatsapp:hover {
-  background: #16a34a;
+  background: #15803d !important;
+  box-shadow: 0 10px 30px rgba(22,163,74,0.48) !important;
 }
 
-/* Texto pequeño bajo botones */
 .small-note {
-  font-size: 0.88rem;
-  opacity: 0.9;
+  font-size: 0.83rem;
+  color: #64748b;
+  margin-top: 0.8rem;
 }
 
-/* =========================
-   Secciones
-   ========================= */
+.hero .small-note {
+  color: #475569;
+}
+
+/* ==============================================
+   CONTACT ACTIONS
+   ============================================== */
+.contact-actions {
+  display: flex;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* ==============================================
+   SECCIONES
+   ============================================== */
 .section {
-  padding: 3.5rem 0;
-  background: #f4f5fb;
+  padding: 5rem 0;
+  background: var(--gray-1);
 }
 
 .section.alt {
   background: #ffffff;
 }
 
-.section h2 {
-  font-size: 1.9rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 0.4rem;
-  letter-spacing: -0.02em;
+/* Diagonal clip entre hero y primera sección */
+.hero + .section,
+.hero + .section.alt {
+  margin-top: -3rem;
+  padding-top: 6rem;
+  clip-path: polygon(0 3rem, 100% 0, 100% 100%, 0 100%);
 }
 
-.section h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 48%;
-  max-width: 140px;
-  height: 3px;
-  background: linear-gradient(90deg, #2563eb, #38bdf8);
+/* ==============================================
+   TÍTULOS DE SECCIÓN
+   ============================================== */
+.section-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  background: var(--blue-light);
+  padding: 0.25rem 0.7rem;
   border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.section h2 {
+  font-size: clamp(1.55rem, 3vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--dark-2);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.section-intro {
+  font-size: 1rem;
+  color: var(--text-soft);
+  max-width: 580px;
+  margin-bottom: 2.75rem;
+  line-height: 1.75;
 }
 
 .section h3 {
-  font-size: 1.15rem;
-  margin-bottom: 0.65rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--dark-2);
 }
 
-/* =========================
-   Layouts de columnas
-   ========================= */
+/* ==============================================
+   GRIDS
+   ============================================== */
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.75rem;
 }
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 1.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
-/* Listas genéricas */
-ul {
-  list-style: disc;
-  margin-left: 1.2rem;
+/* ==============================================
+   LISTAS GENÉRICAS
+   ============================================== */
+ul:not(.hero-bullets):not(.steps):not(.cards) {
+  list-style: none;
+  margin-left: 0;
 }
 
-/* =========================
-   Tablas ejemplo antes/después
-   ========================= */
+ul:not(.hero-bullets):not(.steps):not(.cards) li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.93rem;
+  color: var(--text-soft);
+}
+
+ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ==============================================
+   FEATURE CARDS (sección ¿Qué incluye?)
+   ============================================== */
+.grid-2 > div {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.85rem;
+  border: 1px solid var(--gray-3);
+  border-top: 3px solid var(--blue);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.grid-2 > div:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+/* ==============================================
+   TABLAS ANTES / DESPUÉS  (estilo terminal)
+   ============================================== */
 .tables {
-  margin-top: 1.25rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 1.75rem;
+  margin-top: 1.75rem;
 }
 
 .table-wrapper {
-  width: 100%;
+  background: #0f172a;
+  border-radius: var(--radius);
+  padding: 1.35rem;
   overflow-x: auto;
-  background: #ffffff;
-  border-radius: 0.6rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
-  padding: 0.9rem;
+  border: 1px solid #1e293b;
+  box-shadow: var(--shadow-md);
 }
 
 .table-wrapper h3 {
-  font-size: 1rem;
-  margin-bottom: 0.4rem;
-  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #64748b;
+  margin-bottom: 0.2rem;
 }
 
-/* Tabla */
+.table-wrapper .small-note {
+  font-size: 0.78rem;
+  color: #334155;
+  margin-bottom: 0.9rem;
+  display: block;
+}
+
 .table-wrapper table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.3rem;
-  font-size: 0.88rem;
+  font-size: 0.82rem;
+  font-family: 'Courier New', 'Consolas', monospace;
 }
 
-/* Solo obligar a scroll en móvil */
 @media (max-width: 600px) {
-  .table-wrapper table {
-    min-width: 580px;
-  }
-}
-
-.table-wrapper th,
-.table-wrapper td {
-  border: 1px solid #d0d7e2;
-  padding: 0.4rem 0.55rem;
+  .table-wrapper table { min-width: 560px; }
 }
 
 .table-wrapper th {
-  background: #eff4ff;
+  background: #1e293b;
+  color: #38bdf8;
   text-align: left;
-  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #334155;
 }
 
-/* =========================
-   Pasos
-   ========================= */
+.table-wrapper td {
+  padding: 0.45rem 0.75rem;
+  color: #94a3b8;
+  border-bottom: 1px solid #1e293b;
+}
+
+.table-wrapper tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table-wrapper tbody tr:hover td {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+/* Tabla "Después" con acento verde */
+.table-wrapper:last-child th {
+  color: #34d399;
+}
+
+/* ==============================================
+   PROCESO / TIMELINE
+   ============================================== */
 .steps {
   list-style: none;
+  position: relative;
+  padding-left: 0;
   margin-top: 0.5rem;
+}
+
+/* Línea vertical */
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 1.1rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--blue) 0%, var(--cyan) 100%);
+  border-radius: 999px;
 }
 
 .steps li {
-  margin-bottom: 0.9rem;
-  font-size: 0.97rem;
-}
-
-.steps strong {
-  color: #1d4ed8;
-}
-
-/* =========================
-   Tarjetas de precios
-   ========================= */
-.cards .card {
-  background: #ffffff;
-  border-radius: 0.85rem;
-  padding: 1.7rem 1.6rem;
-  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
-  border: 1px solid rgba(148, 163, 184, 0.35);
-}
-
-.cards .card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.45rem;
-}
-
-.price {
-  font-size: 1.55rem;
-  font-weight: 700;
-  color: #1d4ed8;
-  margin-bottom: 0.4rem;
-}
-
-/* =========================
-   FAQ
-   ========================= */
-.faq-item {
-  background: #ffffff;
-  border-radius: 0.75rem;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
-}
-
-.faq-item h3 {
-  font-size: 0.98rem;
-  margin-bottom: 0.35rem;
-  font-weight: 600;
-  color: #0f172a;
-}
-
-.faq-item p {
-  font-size: 0.93rem;
-  color: #4b5563;
-}
-
-/* =========================
-   Ejemplos de trabajos
-   ========================= */
-.examples {
-  background-color: #f9fafb;
-}
-
-.examples .section-subtitle {
-  max-width: 600px;
-  margin: 0.5rem auto 2rem;
-  color: #6b7280;
-  text-align: center;
-  font-size: 0.97rem;
-}
-
-.examples-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.example-card {
-  background-color: #ffffff;
-  border-radius: 0.85rem;
-  padding: 1.25rem 1.5rem;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
-  border: 1px solid #e5e7eb;
-}
-
-.example-card h3 {
-  font-size: 1.02rem;
-  margin-bottom: 0.5rem;
-  color: #111827;
-}
-
-.example-card p {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: #4b5563;
-}
-
-/* =========================
-   Aviso plazas limitadas
-   ========================= */
-.limited-slots {
-  background-color: #fffbeb;
-  border-left: 4px solid #f59e0b;
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.7rem;
-  border-radius: 0.7rem;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: #92400e;
-}
-
-.limited-slots strong {
-  color: #b45309;
-}
-
-/* =========================
-   Acciones de contacto
-   ========================= */
-.contact-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.75rem;
-  flex-wrap: wrap;
-}
-
-/* =========================
-   Legal
-   ========================= */
-.legal {
-  background-color: #f3f4f6;
-  font-size: 0.9rem;
-  padding-top: 3rem;
-  padding-bottom: 2.5rem;
-}
-
-.legal h2 {
-  text-align: center;
-  margin-bottom: 1.3rem;
-  font-size: 1.3rem;
-}
-
-.legal-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.legal-links a {
-  color: #1d4ed8;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.legal-links a:hover {
-  text-decoration: underline;
-}
-
-.legal-block {
-  background-color: #ffffff;
-  border-radius: 0.75rem;
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 1.25rem;
-  border: 1px solid #e5e7eb;
-  line-height: 1.65;
-}
-
-.legal-block h3 {
-  margin-top: 0;
-  margin-bottom: 0.7rem;
-  font-size: 0.98rem;
-}
-
-/* =========================
-   Footer
-   ========================= */
-.footer {
-  padding: 1.5rem 0;
-  background: #020617;
-  color: #e5e7eb;
-  font-size: 0.86rem;
-  margin-top: 0.5rem;
-}
-
-.footer p {
-  text-align: center;
-}
-
-/* =========================
-   Responsive
-   ========================= */
-@media (max-width: 768px) {
-  .hero {
-    padding: 3.5rem 0 2.8rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.22;
-  }
-
-  .subtitle {
-    font-size: 0.98rem;
-  }
-
-  .tables {
-    gap: 1.3rem;
-  }
-
-  .examples-grid {
-    gap: 1.1rem;
-  }
-
-  .example-card {
-    padding: 1rem 1rem;
-  }
-
-  .contact-actions {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.65rem;
-  }
-
-  .container {
-    padding: 0 1.1rem;
-  }
-}
+  position: relative;
+  padding: 0 0 1.5rem 3.2rem;
+  font-size: 0.96rem;
+  color: var
