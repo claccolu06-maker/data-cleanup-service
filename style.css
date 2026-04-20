@@ -62,7 +62,7 @@ body {
 }
 
 /* ==============================================
-   NAVBAR FIJA (pseudo-elemento en hero)
+   NAVBAR FIJA
    ============================================== */
 body::before {
   content: '';
@@ -78,16 +78,16 @@ body::before {
   right: 0;
   z-index: 100;
   height: 56px;
-  background: rgba(10, 15, 30, 0.92);
+  background: rgba(10, 15, 30, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   padding: 0 2.5rem;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: #cbd5e1;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
@@ -105,7 +105,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Grid decorativo de fondo */
 .hero::after {
   content: '';
   position: absolute;
@@ -131,14 +130,6 @@ body::before {
   margin-bottom: 1.3rem;
 }
 
-.hero h1 em {
-  font-style: normal;
-  background: linear-gradient(90deg, #60a5fa 0%, #22d3ee 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 .subtitle {
   font-size: 1.05rem;
   max-width: 600px;
@@ -147,7 +138,6 @@ body::before {
   line-height: 1.75;
 }
 
-/* Bullets como badges pill */
 .hero-bullets {
   list-style: none;
   display: flex;
@@ -205,7 +195,6 @@ body::before {
   box-shadow: 0 10px 30px rgba(37,99,235,0.45);
 }
 
-/* En hero los botones son blancos */
 .hero .btn-primary {
   background: #ffffff;
   color: var(--blue-dark);
@@ -232,6 +221,7 @@ body::before {
   font-size: 0.83rem;
   color: #64748b;
   margin-top: 0.8rem;
+  display: block;
 }
 
 .hero .small-note {
@@ -260,7 +250,7 @@ body::before {
   background: #ffffff;
 }
 
-/* Diagonal clip entre hero y primera sección */
+/* Diagonal entre hero y primera sección */
 .hero + .section,
 .hero + .section.alt {
   margin-top: -3rem;
@@ -279,7 +269,7 @@ body::before {
   text-transform: uppercase;
   color: var(--blue);
   background: var(--blue-light);
-  padding: 0.25rem 0.7rem;
+  padding: 0.25rem 0.75rem;
   border-radius: 999px;
   margin-bottom: 0.75rem;
 }
@@ -289,7 +279,7 @@ body::before {
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--dark-2);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   line-height: 1.2;
 }
 
@@ -334,9 +324,10 @@ ul:not(.hero-bullets):not(.steps):not(.cards) {
 ul:not(.hero-bullets):not(.steps):not(.cards) li {
   position: relative;
   padding-left: 1.4rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.65rem;
   font-size: 0.93rem;
   color: var(--text-soft);
+  line-height: 1.6;
 }
 
 ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
@@ -355,7 +346,7 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
 .grid-2 > div {
   background: #fff;
   border-radius: var(--radius);
-  padding: 1.85rem;
+  padding: 2.25rem 2rem;
   border: 1px solid var(--gray-3);
   border-top: 3px solid var(--blue);
   box-shadow: var(--shadow-sm);
@@ -368,7 +359,7 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
 }
 
 /* ==============================================
-   TABLAS ANTES / DESPUÉS  (estilo terminal)
+   TABLAS ANTES / DESPUÉS (estilo terminal)
    ============================================== */
 .tables {
   display: grid;
@@ -399,7 +390,6 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
   font-size: 0.78rem;
   color: #334155;
   margin-bottom: 0.9rem;
-  display: block;
 }
 
 .table-wrapper table {
@@ -436,30 +426,29 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
 .table-wrapper tbody tr:hover td {
   background: #1e293b;
   color: #e2e8f0;
+  transition: all 0.15s ease;
 }
 
-/* Tabla "Después" con acento verde */
 .table-wrapper:last-child th {
   color: #34d399;
 }
 
 /* ==============================================
-   PROCESO / TIMELINE
+   PROCESO / TIMELINE VERTICAL
    ============================================== */
 .steps {
   list-style: none;
   position: relative;
   padding-left: 0;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
-/* Línea vertical */
 .steps::before {
   content: '';
   position: absolute;
-  left: 1.1rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
+  left: 1.15rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
   width: 2px;
   background: linear-gradient(180deg, var(--blue) 0%, var(--cyan) 100%);
   border-radius: 999px;
@@ -467,6 +456,16 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
 
 .steps li {
   position: relative;
-  padding: 0 0 1.5rem 3.2rem;
-  font-size: 0.96rem;
-  color: var
+  padding: 1.1rem 1.25rem 1.1rem 3.5rem;
+  margin-bottom: 0.85rem;
+  background: #ffffff;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-3);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.95rem;
+  color: var(--text-soft);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.steps li:hover {
+  box-
