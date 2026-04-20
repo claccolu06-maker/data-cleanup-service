@@ -2,363 +2,345 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Servicio de Data Cleanup</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Servicio de Data Cleanup | Limpieza profesional de bases de datos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Limpieza profesional de bases de datos y listados: depuración, unificación, deduplicación y entrega de archivo listo para usar con un informe de insights."
+  ."
+  />
+  " />
 </head>
 <body>
   <!-- HERO -->
   <header class="hero">
     <div class="container">
-      <h1>Convierte tus datos desordenados en decisiones claras y accionables</h1>
+      <h1>
+        Convierte tu base de datos caótica en un activo limpio y listo para vender
+      </h1>
       <p class="subtitle">
-        Limpio tus bases de datos, unifico la información y preparo un informe con los insights importantes
-        para entender mejor tus clientes, ventas y resultados.
+        Subes tu fichero y yo me encargo de detectar errores, unificar formatos, eliminar duplicados
+        y devolverlo listo para usar, acompañado de un informe con los principales insights.
       </p>
-      <ul class="hero-bullets">
-        <li>Limpieza de bases de datos (clientes, ventas, pedidos).</li>
-        <li>Corrección de errores, duplicados y formatos.</li>
-        <li>Archivo limpio + informe con gráficos e insights.</li>
+
+      <ul class="hero-bulletsts">
+        >Ideal para listados de clientes, leads, contactos B2B y datos de CRM.</l/li>
+        >Limpieza manual + reglas automáticas para máxima calidad del dato.</l/li>
+        >Entrega en el formato que uses a diario: Excel, CSV o Google Sheets.</li>
       </ul>
-      <a href="#contacto" class="btn-primary">Solicitar presupuesto gratuito</a>
+
+      <div class="contact-actions">
+        <a href="#contacto" class="btn-primary">
+          Solicitar presupuesto para mi base de datos
+        </a>
+        <a
+          href="https://wa.me/34600000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary btn-whatsapp"
+        >
+          Hablar por WhatsApp
+        </a>
+      </div>
+
       <p class="small-note">
-        Envíame tu archivo y en 24 horas te digo qué puedo hacer por tus datos.
+        Sin compromiso: reviso tu caso y te propongo una solución y precio cerrados antes de empezar.
       </p>
     </div>
   </header>
 
-  <main>
-    <!-- QUÉ HAGO -->
-    <section class="section" id="servicio">
-      <div class="container">
-        <h2>Qué hago exactamente</h2>
-        <div class="grid-2">
-          <div>
-            <h3>Limpieza profunda de datos</h3>
-            <ul>
-              <li>Eliminación de duplicados y registros innecesarios.</li>
-              <li>Corrección de formatos (fechas, mayúsculas/minúsculas, espacios).</li>
-              <li>Normalización de nombres de clientes, productos y categorías.</li>
-              <li>Validación de emails, códigos postales y campos clave.</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Validación, enriquecimiento e informe</h3>
-            <ul>
-              <li>Detección y corrección de errores e incoherencias.</li>
-              <li>Identificación de campos vacíos críticos.</li>
-              <li>Creación de columnas útiles (segmentos, etiquetas, métricas).</li>
-              <li>Informe visual con gráficos e insights accionables.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ANTES / DESPUÉS -->
-    <section class="section alt" id="ejemplo">
-      <div class="container">
-        <h2>Antes y después</h2>
-        <p>Un ejemplo simplificado de cómo queda una base de datos tras el proceso de limpieza:</p>
-        <div class="grid-2 tables">
-          <div>
-            <h3>Antes</h3>
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Fecha compra</th>
-                    <th>Cantidad</th>
-                    <th>Estado</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>juan garcia</td>
-                    <td>JUAN@GMAIL.COM</td>
-                    <td>01/02/25</td>
-                    <td>1</td>
-                    <td>completada</td>
-                  </tr>
-                  <tr>
-                    <td>Juan García</td>
-                    <td>juan@gmail.com</td>
-                    <td>1-2-2025</td>
-                    <td>1</td>
-                    <td>Completada</td>
-                  </tr>
-                  <tr>
-                    <td>J. García</td>
-                    <td>juan.garcia@gmail.co m</td>
-                    <td>01.02.2025</td>
-                    <td>1</td>
-                    <td>Completa</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div>
-            <h3>Después</h3>
-            <div class="table-wrapper">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Fecha_compra</th>
-                    <th>Cantidad_total</th>
-                    <th>Estado</th>
-                    <th>Segmento</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Juan García</td>
-                    <td>juan@gmail.com</td>
-                    <td>2025-02-01</td>
-                    <td>3</td>
-                    <td>Completada</td>
-                    <td>Clientes recurrente</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p class="small-note">
-              La tabla limpia permite identificar rápidamente a tus mejores clientes y tomar decisiones.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROCESO -->
-    <section class="section" id="proceso">
-      <div class="container">
-        <h2>Cómo trabajamos</h2>
-        <ol class="steps">
-          <li><strong>1. Envío de archivos</strong> · Me mandas tus Excels/CSVs o exportaciones de tu tienda o CRM.</li>
-          <li><strong>2. Revisión y propuesta</strong> · Analizo la calidad de los datos y te envío un presupuesto cerrado.</li>
-          <li><strong>3. Limpieza y análisis</strong> · Aplico reglas de limpieza, valoro casos dudosos y genero las métricas clave.</li>
-          <li><strong>4. Entrega</strong> · Recibes el archivo limpio y un informe visual listo para presentar o seguir trabajando.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PRECIOS -->
-    <section class="section alt" id="precios">
-      <div class="container">
-        <h2>Precios orientativos</h2>
-        <p>El precio final depende del volumen y la complejidad de tus datos, pero estos son rangos habituales:</p>
-        <p><strong>Siempre trabajo con presupuesto cerrado antes de empezar, sin sorpresas.</strong></p>
-        <div class="grid-3 cards">
-          <div class="card">
-            <h3>Pequeño</h3>
-            <p class="price">40–60 €</p>
-            <p>Hasta 5.000 filas. Ideal para bases de clientes o ventas de pequeño negocio.</p>
-          </div>
-          <div class="card">
-            <h3>Medio</h3>
-            <p class="price">80–150 €</p>
-            <p>Entre 5.000 y 50.000 filas. Pensado para tiendas online y negocios en crecimiento.</p>
-          </div>
-          <div class="card">
-            <h3>Grande</h3>
-            <p class="price">A medida</p>
-            <p>Más de 50.000 filas o varias fuentes de datos. Presupuesto personalizado.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="container">
-        <h2>Preguntas frecuentes</h2>
-
-        <div class="faq-item">
-          <h3>¿Qué tipos de archivos aceptas?</h3>
-          <p>
-            Trabajo sobre todo con Excel y CSV, pero también puedo partir de exportaciones de tu tienda online,
-            CRM u otros sistemas siempre que se puedan convertir a tabla.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Cuánto tardas en entregar un proyecto?</h3>
-          <p>
-            Depende del volumen y la complejidad, pero la mayoría de proyectos pequeños se entregan en
-            entre 2 y 5 días laborables. En la propuesta inicial siempre indico el plazo estimado.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Cómo se calcula el precio final?</h3>
-          <p>
-            El precio depende del número de filas, el estado de los datos y si necesitas solo limpieza o
-            también informe con gráficos. Siempre acordamos un presupuesto cerrado antes de empezar.
-          </p>
-        </div>
-
-        <div class="faq-item">
-          <h3>¿Qué pasa con mis datos una vez terminas?</h3>
-          <p>
-            Uso tus datos solo para realizar el trabajo contratado. Una vez entregado el proyecto,
-            conservo los archivos como máximo [X] días por si hay ajustes y después los elimino de forma segura.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOBRE MÍ -->
-    <section class="section alt" id="sobre-mi">
-      <div class="container">
-        <h2>Sobre mí</h2>
-        <p>
-          Soy estudiante de <strong>Marketing e Investigacion de nmercados</strong> en la Universidad de Sevilla y desarrollador Python especializado en análisis de datos y automatización. He trabajado con bases de datos de negocios locales, tiendas online y proyectos académicos, limpiando miles de filas para convertirlas en informes claros y accionables.
-        </p>
-        <p>
-          <strong>Garantía:</strong> Si los resultados no cumplen tus expectativas, no te cobro. Tu satisfacción es mi prioridad.
-        </p>
-      </div>
-    </section>
-
-    <!-- EJEMPLOS DE TRABAJOS -->
-    <section class="section examples" id="ejemplos">
-      <div class="container">
-        <h2>Ejemplos de trabajos de limpieza de datos</h2>
-        <p class="section-subtitle">
-          Algunos tipos de proyectos reales en los que puedo ayudarte.
-        </p>
-
-        <div class="examples-grid">
-          <div class="example-card">
-            <h3>Tienda online con catálogo desordenado</h3>
-            <p>
-              Limpieza de un Excel con productos duplicados, nombres incoherentes y categorías mezcladas.
-              Resultado: archivo unificado listo para importar en la tienda online, con stock y precios bien alineados.
-            </p>
-          </div>
-
-          <div class="example-card">
-            <h3>Base de datos de clientes de academia</h3>
-            <p>
-              Corrección de nombres, emails y teléfonos, eliminación de duplicados y creación de campos como “estado del alumno” o “canal de captación”.
-              Resultado: base de datos lista para campañas de email segmentadas.
-            </p>
-          </div>
-
-          <div class="example-card">
-            <h3>Listado de facturas para análisis</h3>
-            <p>
-              Unificación de formatos de fecha, conceptos y categorías de gasto/ingreso en varios Excels distintos.
-              Resultado: archivo único limpio con el que se pueden hacer gráficos e informes de resultados por mes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section class="section" id="contacto">
-      <div class="container">
-        <h2>Contacto</h2>
-
-        <div class="limited-slots">
-          <p><strong>Plazas limitadas:</strong> solo acepto unos pocos proyectos de limpieza de datos al mes para garantizar un trabajo cuidado y personalizado.</p>
-          <p>Si ves esta página online, todavía estoy aceptando nuevos proyectos.</p>
-        </div>
-
-        <p>
-          Envíame tu archivo o cuéntame qué datos tienes y qué necesitas conseguir. <strong>En menos de 24 horas te respondo</strong> con un diagnóstico y presupuesto cerrado.
-        </p>
-
-        <div class="contact-actions">
-          <a
-            href="mailto:tuemail@ejemplo.com?subject=Presupuesto%20limpieza%20de%20datos&body=Hola,%20tengo%20datos%20que%20necesito%20limpiar.%20Te%20cuento:%20"
-            class="btn-primary"
-          >
-            Enviar email con mi archivo
-          </a>
-          <a
-            href="https://wa.me/34XXXXXXXXX?text=Hola,%20quiero%20un%20presupuesto%20para%20limpiar%20mis%20datos."
-            target="_blank"
-            class="btn-primary btn-whatsapp"
-          >
-            Hablar por WhatsApp ahora
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEGAL -->
-    <section class="section legal" id="legal">
-      <div class="container">
-        <h2>Aviso legal, términos y privacidad</h2>
-
-        <div class="legal-links">
-          <a href="#terminos">Términos del servicio</a>
-          <a href="#privacidad">Política de privacidad</a>
-        </div>
-
-        <div class="legal-block" id="terminos">
-          <h3>Términos del servicio</h3>
-          <p>
-            Este sitio web ofrece un servicio profesional de limpieza y análisis básico de datos
-            a medida. El objetivo es recibir tus archivos (por ejemplo, Excel o CSV), limpiarlos
-            y devolverte un archivo depurado junto con un pequeño informe.
-          </p>
-          <p>
-            Antes de empezar cada proyecto, acordaremos por escrito el alcance del trabajo, el precio
-            cerrado y el plazo de entrega. No se realizarán cambios adicionales fuera de lo acordado
-            sin un nuevo presupuesto.
-          </p>
-          <p>
-            Aunque se trabaja con el máximo cuidado, no se garantiza que los datos originales estén
-            libres de errores de origen. El responsable de revisar y aprobar el resultado final eres tú
-            antes de usarlo para decisiones importantes.
-          </p>
-        </div>
-
-        <div class="legal-block" id="privacidad">
-          <h3>Política de privacidad y tratamiento de datos</h3>
-          <p>
-            El responsable del tratamiento de los datos es Claudio Accorinti Luna, con sede en Sevilla.
-            Puedes contactar en <a href="mailto:claccolu06@gmail.com">claccolu06@gmail.com</a> para cualquier duda relacionada con la privacidad.
-          </p>
-          <p>
-            Solo se utilizarán tus datos y archivos con la finalidad de prestar el servicio de limpieza
-            y análisis de datos que solicites. No se cederán a terceros ni se usarán para otros fines
-            comerciales sin tu consentimiento explícito.
-          </p>
-          <p>
-            Los archivos que envíes se conservarán únicamente durante el tiempo necesario para realizar
-            el proyecto y entregarte el resultado. Pasado un máximo de [X] días desde la entrega,
-            los archivos y copias de trabajo se eliminan de forma segura.
-          </p>
-          <p>
-            Puedes solicitar en cualquier momento información sobre tus datos, pedir su rectificación
-            o eliminación escribiendo al correo indicado arriba.
-          </p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
+  <!-- QUÉ HAGO / BENEFICIOS -->
+  <section class="section alt">
     <div class="container">
-      <p>© 2026 Servicio de Data Cleanup · Dashboardfinanciero.es · Todos los derechos reservados.</p>
+      <h2>¿Qué incluye el servicio de limpieza de datos?</h2>
+
+      <div class="grid-2">
+        <div>
+          <h3>Limpieza profunda de tu fichero</h3>
+          <u
+          <ul>
+            >Normalización de nombres, teléfonos, emails y direcciones.</l/li>
+            >Detección y eliminación de registros duplicados.</l/li>
+            >Corrección de campos evidentes (errores tipográficos, espacios, símbolos). [web:2][web:14]</li>
+            >Revisión de campos clave para asegurar consistencia (país, idioma, sector, etc.). [web:2][web:14]</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Entrega lista para usar + informe</h3>
+          <u
+          <ul>
+            >Archivo limpio en el formato que prefieras (Excel, CSV o Google Sheets).</l/li>
+            >Resumen de los principales problemas detectados en tu base de datos. [web:3][web:18]</li>
+            >Indicadores básicos: % de duplicados, % de registros corregidos, campos incompletos. [web:3][web:20]</li>
+            >Recomendaciones para mantener la calidad del dato a futuro.</li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </footer>
-</body>
-</html>
+  </section>
 
+  <!-- EJEMPLO ANTES / DESPUÉS -->
+  <section class="section">
+    <div class="container">
+      <h2>Ejemplo real: antes y después</h2>
+      <p>
+        Este es un ejemplo simplificado del tipo de transformación que aplico a tus datos.
+        Tú envías algo parecido a la columna “Antes” y recibes algo como la columna “Después”.
+      </p>
 
+      <div class="tables">
+        <!-- Antes -->
+        <div class="table-wrapper">
+          <h3>Antes: fichero original</h3>
+          <p class="small-note">
+            Datos desordenados, formatos inconsistentes y muchas filas duplicadas.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>nombre</th>
+                <th>telefono</th>
+                <th>email</th>
+                <th>empresa</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>juan perez</td>
+                <td>+34 600000000 / 600000000</td>
+                <td>juan.perez@@gmail.com</td>
+                <td>Acme s.l</td>
+              </tr>
+              <tr>
+                <td>JUAN PÉREZ</td>
+                <td>600 000 000</td>
+                <td>juan.perez@gmailcom</td>
+                <td>ACME SL</td>
+              </tr>
+              <tr>
+                <td>Maria López</td>
+                <td>(34)600-111-222</td>
+                <td>maria.lopez@empresa .com</td>
+                <td>Empresa X</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
+        <!-- Después -->
+        <div class="table-wrapper">
+          <h3>Después: fichero limpio</h3>
+          <p class="small-note">
+            Registros unificados, sin duplicados y con formato coherente en todos los campos.
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre completo</th>
+                <th>Teléfono (E.164)</th>
+                <th>Email validado</th>
+                <th>Empresa normalizada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Juan Pérez</td>
+                <td>+34600000000</td>
+                <td>juan.perez@gmail.com</td>
+                <td>ACME SL</td>
+              </tr>
+              <tr>
+                <td>María López</td>
+                <td>+34600111222</td>
+                <td>maria.lopez@empresa.com</td>
+                <td>Empresa X</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- PROCESO -->
+  <section class="section alt">
+    <div class="container">
+      <h2>Cómo trabajamos tu base de datos</h2>
 
+      <ul class="stepsps">
+        ><strong>1. Revisión inicial del fichero</strong> – Me envías tu listado y reviso tamaño, campos y nivel de desorden.</l/li>
+        ><strong>2. Propuesta y presupuesto cerrado</strong> – Te explico qué haré exactamente y el precio total, sin sorpresas.</l/li>
+        ><strong>3. Limpieza y normalización</strong> – Aplico reglas de limpieza, unificación y deduplicación de registros. [web:2][web:17]</li>
+        ><strong>4. Control de calidad</strong> – Compruebo muestras y casos límite para evitar errores importantes.</l/li>
+        ><strong>5. Entrega + informe</strong> – Recibes el archivo limpio y un informe de problemas encontrados y métricas clave. [web:3][web:18]</li>
+      </ul>
+    </div>
+  </section>
 
+  <!-- PRECIOS ORIENTATIVOS -->
+  <section class="section">
+    <div class="container">
+      <h2>Precios orientativos</h2>
+      <p>
+        Cada proyecto es distinto, pero estos rangos te ayudan a hacerte una idea del coste.
+        Siempre te enviaré un presupuesto cerrado antes de empezar.
+      </p>
 
+      <div class="grid-3 cards">
+        <article class="card">
+          <h3>Bases pequeñas</h3>
+          <p class="price">desde 49 €</p>
+          <p>
+            Hasta ~2.000 registros. Listados pequeños de clientes o leads para campañas puntuales.
+          </p>
+          <u
+          <ul>
+            >Limpieza básica de campos clave.</l/li>
+            >Eliminación de duplicados evidentes.</l/li>
+            >Entrega en 2–3 días.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Bases medianas</h3>
+          <p class="price">desde 119 €</p>
+          <p>
+            Entre 2.000 y 15.000 registros. Ideal para CRM, newsletters y bases B2B consolidadas.
+          </p>
+          <u
+          <ul>
+            >Limpieza completa + normalización de formatos.</l/li>
+            >Revisión de campos adicionales (sector, país, etc.).</l/li>
+            >Informe con métricas y recomendaciones.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Bases grandes o complejas</h3>
+          <p class="price">a medida</p>
+          <p>
+            Más de 15.000 registros o múltiples ficheros/estructuras. Cuéntame tu caso y lo vemos.
+          </p>
+          <u
+          <ul>
+            >Definición de reglas específicas para tu negocio.</l/li>
+            >Soporte en varios formatos y sistemas.</l/li>
+            >Entrega por fases si lo necesitas.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="limited-slots">
+        <strong>Plazas limitadas:</strong>
+        trabajo con pocos proyectos a la vez para poder revisar cada base de datos con calma.
+        Si te interesa, reserva tu hueco escribiéndome cuanto antes.
+      </div>
+
+      <div class="contact-actions" id="contacto">
+        <a href="mailto:tucorreo@example.com?subject=Consulta%20servicio%20data%20cleanup" class="btn-primary">
+          Enviar detalles de mi base por email
+        </a>
+        <a
+          href="https://wa.me/34600000000"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-primary btn-whatsapp"
+        >
+          Enviar captura / fichero por WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EJEMPLOS DE TRABAJOS -->
+  <section class="section examples">
+    <div class="container">
+      <h2>Casos en los que este servicio encaja muy bien</h2>
+      <p class="section-subtitle">
+        Algunos ejemplos típicos de clientes que se benefician del data cleanup:
+      </p>
+
+      <div class="examples-grid">
+        <article class="example-card">
+          <h3>Listas de leads de campañas antiguas</h3>
+          <p>
+            Varias campañas, formularios distintos y datos duplicados. Unifico todo para que puedas
+            reactivar tus contactos con un mensaje coherente y sin spam innecesario. [web:8]
+          </p>
+        </article>
+
+        <article class="example-card">
+          <h3>CRM con años de historial</h3>
+          <p>
+            Cuentas, contactos y oportunidades creadas por diferentes personas y sin criterios claros.
+            Limpio la base para que puedas segmentar mejor y medir resultados con confianza. [web:8]
+          </p>
+        </article>
+
+        <article class="example-card">
+          <h3>Datos para estudios y análisis</h3>
+          <p>
+            Bases que necesitas usar en dashboards o informes. El data cleanup reduce ruido, errores
+            y te ayuda a que las conclusiones sean más fiables. [web:4][web:17]
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+
+      <div class="faq-item">
+        <h3>¿Qué formatos de archivo aceptas?</h3>
+        <p>
+          Trabajo principalmente con Excel, CSV y Google Sheets. Si tienes la información en otro
+          sistema, podemos ver cómo exportarla para poder limpiarla. [web:2][web:17]
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Firmas algún acuerdo de confidencialidad?</h3>
+        <p>
+          Sí. Podemos firmar un acuerdo de confidencialidad (NDA) sencillo para proteger tus datos.
+          Tu base de datos se utiliza únicamente para el proyecto y no se comparte con terceros. [web:3]
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Cómo te envío la base de datos?</h3>
+        <p>
+          Lo más habitual es que me envíes un enlace a un archivo en la nube (Drive, Dropbox, etc.)
+          o que lo adjuntes por email. Si lo prefieres, también podemos coordinarlo por WhatsApp.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>¿Qué pasa si después encuentro errores?</h3>
+        <p>
+          Incluyo una pequeña revisión posterior: si detectas algún problema razonable relacionado
+          con la limpieza, lo reviso y corrijo sin coste adicional dentro de los primeros días.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGAL / AVISO -->
+  <section class="legal">
+    <div class="container">
+      <h2>Información legal y privacidad</h2>
+
+      <div class="legal-links">
+        <a href="#aviso-legal">Aviso legal</a>
+        <a href="#privacidad">Política de privacidad</a>
+        <a href="#cookies">Política de cookies</a>
+      </div>
+
+      <div id="aviso-legal" class="legal-block">
+        <h3>Aviso legal</h3>
+        <p>
+          Aquí puedes incluir los datos básicos del prestador del servicio (nombre completo,
+          NIF/NIE, forma de contacto, etc.) y cualquier otra información requerida 
