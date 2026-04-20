@@ -70,7 +70,7 @@ body::before {
   height: 56px;
 }
 
-.hero::before {
+header.hero::before {
   content: 'Data Cleanup · Servicio profesional de limpieza de datos';
   position: fixed;
   top: 0;
@@ -235,20 +235,19 @@ body::before {
   display: flex;
   gap: 0.85rem;
   flex-wrap: wrap;
+  align-items: center;
   margin-top: 1.5rem;
 }
 
 /* ==============================================
    SECCIONES
    ============================================== */
-.section {
+.section, .legal, .footer {
   padding: 5rem 0;
   background: var(--gray-1);
 }
 
-.section.alt {
-  background: #ffffff;
-}
+.section.alt { background: #ffffff; }
 
 /* Diagonal entre hero y primera sección */
 .hero + .section,
@@ -261,29 +260,23 @@ body::before {
 /* ==============================================
    TÍTULOS DE SECCIÓN
    ============================================== */
-.section-label {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--blue);
-  background: var(--blue-light);
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  margin-bottom: 0.75rem;
-}
-
-.section h2 {
+.section h2, .legal h2 {
   font-size: clamp(1.55rem, 3vw, 2.1rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   color: var(--dark-2);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
   line-height: 1.2;
 }
 
-.section-intro {
+.section > .container > p:first-of-type {
+  font-size: 1rem;
+  color: var(--text-soft);
+  max-width: 580px;
+  margin-bottom: 2.75rem;
+  line-height: 1.75;
+}
+.section .section-subtitle {
   font-size: 1rem;
   color: var(--text-soft);
   max-width: 580px;
@@ -309,19 +302,20 @@ body::before {
 
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1.5rem;
 }
 
 /* ==============================================
-   LISTAS GENÉRICAS
+   LISTAS CON VIÑETAS
    ============================================== */
-ul:not(.hero-bullets):not(.steps):not(.cards) {
+.grid-2 div ul, .card ul {
   list-style: none;
-  margin-left: 0;
+  margin: 1.5rem 0 0;
+  padding: 0;
 }
 
-ul:not(.hero-bullets):not(.steps):not(.cards) li {
+.grid-2 div ul li, .card ul li {
   position: relative;
   padding-left: 1.4rem;
   margin-bottom: 0.65rem;
@@ -330,20 +324,20 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li {
   line-height: 1.6;
 }
 
-ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
-  content: '→';
+.grid-2 div ul li::before, .card ul li::before {
+  content: '✓';
   position: absolute;
   left: 0;
   top: 0.05rem;
-  color: var(--blue);
+  color: var(--green);
   font-weight: 700;
-  font-size: 0.85rem;
 }
+
 
 /* ==============================================
    FEATURE CARDS (sección ¿Qué incluye?)
    ============================================== */
-.grid-2 > div {
+.grid-2 > div:not(.table-wrapper) {
   background: #fff;
   border-radius: var(--radius);
   padding: 2.25rem 2rem;
@@ -353,7 +347,7 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
   transition: box-shadow 0.22s ease, transform 0.22s ease;
 }
 
-.grid-2 > div:hover {
+.grid-2 > div:not(.table-wrapper):hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
 }
@@ -363,7 +357,7 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
    ============================================== */
 .tables {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 1.75rem;
   margin-top: 1.75rem;
 }
@@ -397,10 +391,7 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
   border-collapse: collapse;
   font-size: 0.82rem;
   font-family: 'Courier New', 'Consolas', monospace;
-}
-
-@media (max-width: 600px) {
-  .table-wrapper table { min-width: 560px; }
+  min-width: 500px;
 }
 
 .table-wrapper th {
@@ -440,7 +431,7 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
   list-style: none;
   position: relative;
   padding-left: 0;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .steps::before {
@@ -462,10 +453,233 @@ ul:not(.hero-bullets):not(.steps):not(.cards) li::before {
   border-radius: var(--radius);
   border: 1px solid var(--gray-3);
   box-shadow: var(--shadow-sm);
-  font-size: 0.95rem;
   color: var(--text-soft);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .steps li:hover {
-  box-
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.steps li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--blue);
+  background-image: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--blue);
+}
+
+.steps li strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-2);
+  margin-bottom: 0.25rem;
+}
+
+/* ==============================================
+   TARJETAS DE PRECIOS
+   ============================================== */
+.cards { margin-top: 2rem; }
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2.5rem 2rem;
+  border: 1px solid var(--gray-3);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card h3 { font-size: 1.2rem; }
+
+.card .price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--dark);
+  margin: 0.75rem 0;
+}
+
+.card p {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.limited-slots {
+  background: var(--blue-light);
+  border: 1px solid var(--blue);
+  color: var(--blue-dark);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  text-align: center;
+  margin: 2.5rem auto 0;
+  max-width: 700px;
+  font-size: 0.9rem;
+}
+
+/* ==============================================
+   CASOS DE USO (EXAMPLES)
+   ============================================== */
+.examples.section { background: #fff; }
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.example-card {
+  background: var(--gray-1);
+  border: 1px solid var(--gray-3);
+  padding: 1.75rem;
+  border-radius: var(--radius);
+}
+
+.example-card h3 { font-size: 1.1rem; }
+.example-card p { font-size: 0.95rem; color: var(--text-soft); }
+
+
+/* ==============================================
+   FAQ (ACORDEÓN)
+   ============================================== */
+.faq-item {
+  background: #fff;
+  border: 1px solid var(--gray-3);
+  border-radius: calc(var(--radius) / 1.5);
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-item h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--dark-2);
+  cursor: pointer;
+  margin: 0;
+}
+
+.faq-item h3::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--blue);
+  transition: transform 0.25s ease;
+}
+
+.faq-item p {
+  max-height: 0;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+  padding: 0 1.25rem;
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.faq-item.active p {
+  max-height: 200px; /* Ajustar si el contenido es más largo */
+  padding-bottom: 1.5rem;
+}
+
+.faq-item.active h3::after {
+  transform: rotate(45deg);
+}
+
+/* ==============================================
+   SECCIÓN LEGAL
+   ============================================== */
+.legal { background: var(--gray-2); padding-top: 4rem; padding-bottom: 4rem; }
+.legal h2 { text-align: center; }
+
+.legal-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0 3rem;
+  flex-wrap: wrap;
+}
+.legal-links a {
+  font-weight: 500;
+  color: var(--text-soft);
+  text-decoration: none;
+}
+.legal-links a:hover { color: var(--blue); }
+
+.legal-block {
+  background: #fff;
+  border: 1px solid var(--gray-3);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius);
+  margin-bottom: 1.5rem;
+}
+
+.legal-block h3 { margin-bottom: 0.5rem; }
+.legal-block p { color: var(--text-soft); font-size: 0.9rem; }
+
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+.footer {
+  background: var(--dark-2);
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--gray-3);
+  text-align: center;
+}
+
+.footer p {
+  font-size: 0.88rem;
+  color: var(--gray-4);
+}
+
+/* ==============================================
+   RESPONSIVIDAD
+   ============================================== */
+@media (max-width: 768px) {
+  body::before, .hero::before { height: 50px; }
+  body::before { content: ' '; }
+  header.hero::before { padding: 0 1.5rem; }
+  
+  .hero { padding: 4rem 0 6rem; }
+  .section, .legal { padding: 4rem 0; }
+  
+  .hero + .section,
+  .hero + .section.alt {
+    margin-top: -2.5rem;
+    padding-top: 5rem;
+    clip-path: polygon(0 2.5rem, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .contact-actions { justify-content: center; }
+  .tables { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  header.hero::before {
+    content: 'Data Cleanup';
+    justify-content: center;
+    font-size: 0.75rem;
+  }
+  .btn-primary { width: 100%; }
+}
