@@ -7,6 +7,28 @@
   <meta name="description" content="Limpieza profesional de bases de datos y listados: depuración,deduplicación y entrega de archivo listo para usar con un informe de insights." />
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+    // Actualiza el año en el footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Lógica para el acordeón de FAQ
+    document.querySelectorAll('.faq-item h3').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const isOpen = faqItem.classList.contains('active');
+
+        // Opcional: cierra todos los demás items
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+        });
+
+        // Abre o cierra el item actual
+        if (!isOpen) {
+          faqItem.classList.add('active');
+        }
+      });
+    });
+  </script>
 <body>
 
   <!-- HERO -->
